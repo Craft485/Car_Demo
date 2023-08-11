@@ -15,7 +15,7 @@ class App {
             1, // Near plane
             1000  // Far plane
         )
-        this.camera.position.set(10, 10, 10)
+        this.camera.position.set(50, 50, 50)
         this.camera.lookAt(0, 0, 0)
 
         // Setup renderer
@@ -28,10 +28,13 @@ class App {
 
         this.createLights()
         this.createEnviornment()
+
+        const car = new Car(this.scene)
+        
     }
 
     createLights() {
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.6)
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.75)
         this.scene.add(ambientLight)
         console.log(ambientLight)
     }
